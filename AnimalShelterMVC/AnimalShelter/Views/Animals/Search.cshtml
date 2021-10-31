@@ -1,0 +1,16 @@
+
+
+@{
+  Layout = "_Layout";
+}
+
+@model AnimalShelter.Models.Animal
+
+<h3>Search for animal by name:</h3>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  <input type="submit" value="Search for animal"/>
+}
+<p>@Html.ActionLink("Show all animals", "Index")</p>
